@@ -51,7 +51,16 @@ join the processed first and last names using one period (.).
 * The + operator joins the cleaned first name, a period ".", and the cleaned last name into a single continuous string
 
 ```python
+def make_username(first_name, last_name):
+    first_clean = first_name.lower().replace(" ", "")
+    last_clean = last_name.lower().replace(" ", "")
+    return first_clean + "." + last_clean
 
+make_username("Ada", "Lovelace")
+
+make_username("Alan", "Turing")
+
+make_username("Ana Maria", "De Leon")
 
 ```
 ### C. BOOKEND SWAP PROBLEM
