@@ -22,6 +22,13 @@ Create a function named rotate word() that accepts a non-empty string. Move the 
 * The + operator concatenates (joins) these two parts back together, placing the original first character at the end while preserving capitalization and character order.
 
 ```python
+def rotate_word(text):
+    return text[1:] + text[0]
+
+print(rotate_word("python"))
+print(rotate_word("logic"))
+print(rotate_word("Code"))
+print(rotate_word("A"))
 
 ```
 
