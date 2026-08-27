@@ -21,7 +21,7 @@ Create a function named rotate word() that accepts a non-empty string. Move the 
 
 * The + operator concatenates (joins) these two parts back together, placing the original first character at the end while preserving capitalization and character order.
 
-B. USER BUILDER PROBLEM
+### B. USER BUILDER PROBLEM
 
 Create a function named make username() that accepts two strings: first name and last name. The function must:
 
@@ -29,11 +29,14 @@ convert all letters to lowercase;
 remove all spaces from the first name;
 remove all spaces from the last name; and
 join the processed first and last names using one period (.).
-Explanation:
 
-lower() converts every letter in both names to lowercase.
-.replace(" ", "") searches for any space characters in multi-part names (like "Ana Maria") and replaces them with an empty string, effectively deleting the spaces.
-The + operator joins the cleaned first name, a period ".", and the cleaned last name into a single continuous string
+`Explanation:`
+
+* lower() converts every letter in both names to lowercase.
+
+* .replace(" ", "") searches for any space characters in multi-part names (like "Ana Maria") and replaces them with an empty string, effectively deleting the spaces.
+
+* The + operator joins the cleaned first name, a period ".", and the cleaned last name into a single continuous string
 
 ```python
 
@@ -48,45 +51,34 @@ make_username("Alan", "Turing")
 make_username("Ana Maria", "De Leon")
 
 ```
-C. BOOKEND SWAP PROBLEM
+### C. BOOKEND SWAP PROBLEM
 
 Create a function named swap bookends() that accepts a list containing at least two elements. Unpack the list into three variables:
 
-• first – the first element;
+* first – the first element;
 
-• middle – a list containing everything between the first and last elements; and
+* middle – a list containing everything between the first and last elements; and
 
-• last – the last element. Using these variables, return a new list in which the first and last elements have exchanged positions. The elements in middle must remain in their original order.
+* last – the last element. Using these variables, return a new list in which the first and last elements have exchanged positions. The elements in middle must remain in their original order.
 
 Do not modify the input list. Function format: swap bookends(items)
 
-Explanation: first, *middle, last = items uses extended sequence unpacking.
+ `Explanation:` 
+ 
+ *first, *middle, last = items uses extended sequence unpacking.
 
-first extracts the first item, last extracts the final item, and *middle gathers all elements between them into a list. [last] + middle + [first] constructs a brand-new list.
+* first extracts the first item, last extracts the final item, and *middle gathers all elements between them into a list. [last] + middle + [first] constructs a brand-new list.
 
-Placing last at the start and first at the end swaps their positions while leaving the elements inside middle completely untouched in their original order.
+* Placing last at the start and first at the end swaps their positions while leaving the elements inside middle completely untouched in their original order.
 
 ```python
+def swap_bookends(items):
+    first, *middle, last = items
+    return [last] + middle + [first]
 
+print(swap_bookends([1, 2, 3, 4, 5, 6]))
+print(swap_bookends(["red", "green" , "blue"]))
+print(swap_bookends([8, 3]))
 
-
-C. BOOKEND SWAP PROBLEM
-
-Create a function named swap bookends() that accepts a list containing at least two elements. Unpack the list into three variables:
-
-• first – the first element;
-
-• middle – a list containing everything between the first and last elements; and
-
-• last – the last element. Using these variables, return a new list in which the first and last elements have exchanged positions. The elements in middle must remain in their original order.
-
-Do not modify the input list. Function format: swap bookends(items)
-
-Explanation: first, *middle, last = items uses extended sequence unpacking.
-
-first extracts the first item, last extracts the final item, and *middle gathers all elements between them into a list. [last] + middle + [first] constructs a brand-new list.
-
-Placing last at the start and first at the end swaps their positions while leaving the elements inside middle completely untouched in their original order.
-
-
+```
 
