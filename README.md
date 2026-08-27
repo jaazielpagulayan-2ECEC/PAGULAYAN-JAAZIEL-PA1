@@ -21,6 +21,18 @@ Create a function named rotate word() that accepts a non-empty string. Move the 
 
 * The + operator concatenates (joins) these two parts back together, placing the original first character at the end while preserving capitalization and character order.
 
+```python
+def make_username(first_name, last_name):
+    first_clean = first_name.lower().replace(" ", "")
+    last_clean = last_name.lower().replace(" ", "")
+    return first_clean + "." + last_clean
+make_username("Ada", "Lovelace")
+
+make_username("Alan", "Turing")
+
+make_username("Ana Maria", "De Leon")
+```
+
 ### B. USER BUILDER PROBLEM
 
 Create a function named make username() that accepts two strings: first name and last name. The function must:
@@ -40,15 +52,6 @@ join the processed first and last names using one period (.).
 
 ```python
 
-def make_username(first_name, last_name):
-    first_clean = first_name.lower().replace(" ", "")
-    last_clean = last_name.lower().replace(" ", "")
-    return first_clean + "." + last_clean
-make_username("Ada", "Lovelace")
-
-make_username("Alan", "Turing")
-
-make_username("Ana Maria", "De Leon")
 
 ```
 ### C. BOOKEND SWAP PROBLEM
