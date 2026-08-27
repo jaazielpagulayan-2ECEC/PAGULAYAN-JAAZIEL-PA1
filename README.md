@@ -21,6 +21,20 @@ Create a function named rotate word() that accepts a non-empty string. Move the 
 
 * The + operator concatenates (joins) these two parts back together, placing the original first character at the end while preserving capitalization and character order.
 
+B. USER BUILDER PROBLEM
+
+Create a function named make username() that accepts two strings: first name and last name. The function must:
+
+convert all letters to lowercase;
+remove all spaces from the first name;
+remove all spaces from the last name; and
+join the processed first and last names using one period (.).
+Explanation:
+
+lower() converts every letter in both names to lowercase.
+.replace(" ", "") searches for any space characters in multi-part names (like "Ana Maria") and replaces them with an empty string, effectively deleting the spaces.
+The + operator joins the cleaned first name, a period ".", and the cleaned last name into a single continuous string
+
 
 
 
