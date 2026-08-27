@@ -70,4 +70,23 @@ Placing last at the start and first at the end swaps their positions while leavi
 
 
 
+C. BOOKEND SWAP PROBLEM
+
+Create a function named swap bookends() that accepts a list containing at least two elements. Unpack the list into three variables:
+
+• first – the first element;
+
+• middle – a list containing everything between the first and last elements; and
+
+• last – the last element. Using these variables, return a new list in which the first and last elements have exchanged positions. The elements in middle must remain in their original order.
+
+Do not modify the input list. Function format: swap bookends(items)
+
+Explanation: first, *middle, last = items uses extended sequence unpacking.
+
+first extracts the first item, last extracts the final item, and *middle gathers all elements between them into a list. [last] + middle + [first] constructs a brand-new list.
+
+Placing last at the start and first at the end swaps their positions while leaving the elements inside middle completely untouched in their original order.
+
+
 
